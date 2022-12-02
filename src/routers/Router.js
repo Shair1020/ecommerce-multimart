@@ -6,11 +6,12 @@ import ProductDetails from "../pages/ProductDetails";
 import Shop from "../pages/Shop";
 import Cart from "../pages/Cart";
 import Checkout from "../pages/Checkout";
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes ,Navigate} from 'react-router-dom';
 
 
 const Router = () => {
   return <Routes>
+    <Route path='/' element={<Navigate to="/home" />} />
     <Route path='home' element={<Home/>} />
     <Route path='login' element={<Login />} />
     <Route path='shop' element={<Shop />} />

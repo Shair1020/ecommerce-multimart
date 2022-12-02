@@ -11,13 +11,13 @@ import { Route, Routes } from 'react-router-dom';
 
 const Router = () => {
   return <Routes>
-    <Route path='home' element={Home} />
-    <Route path='login' element={Login} />
-    <Route path='shop' element={Shop} />
-    <Route path='shop/:id' element={ProductDetails} />
-    <Route path='cart' element={Cart} />
-    <Route path='signup' element={Signup} />
-    <Route path='checkout' element={Checkout} />
+    <Route path='home' element={<Home/>} />
+    <Route path='login' element={<Login />} />
+    <Route path='shop' element={<Shop />} />
+    <Route path='shop/:id' element={<ProductDetails />} />
+    <Route path='cart' element={<Cart />} />
+    <Route path='signup' element={<Signup />} />
+    <Route path='checkout' element={<Checkout />} />
   </Routes>
 }
 

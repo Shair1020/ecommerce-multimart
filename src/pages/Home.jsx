@@ -6,6 +6,7 @@ import "../styles/home.css"
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 import Service from '../services/Service'
+import ProductList from "../component/UI/ProductsList"
 
 const Home = () => {
   return <Helmet title={"Home"}>
@@ -36,6 +37,17 @@ const Home = () => {
       </Container>
     </section>
     <Service />
+    <section className='trending__products'>
+      <Container>
+        <Row>
+          <Col lg='12' className='text-center'>
+            <h2 className='section__title'>Trending Poducts</h2>
+          </Col>
+          <ProductList />
+        </Row>
+      </Container>
+
+    </section>
   </Helmet>
 }
 

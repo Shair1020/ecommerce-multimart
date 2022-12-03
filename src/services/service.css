@@ -5,6 +5,7 @@
     align-items: center;
     column-gap: 0.7rem;
     border-radius: 5px;
+    cursor: pointer;
 }
 
 .service__item span i {

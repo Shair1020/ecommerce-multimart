@@ -1,7 +1,8 @@
-.header {
+header {
     width: 100%;
-    height: 70px;
+    height: 60px;
     line-height: 70px;
+    padding-top: 10px;
 }
 
 .nav__wrapper {
@@ -24,13 +25,14 @@
 .logo h1 {
     font-size: 1.2rem;
     font-weight: 700;
-    color: var(--primary-color  );
+    color: var(--primary-color);
 }
 
 .menu {
-    display:flex;
+    display: flex;
     align-items: center;
     column-gap: 2.7rem;
+    margin-bottom: 0;
 }
 
 .nav__item a {
@@ -43,13 +45,50 @@
     display: flex;
     align-items: center;
     column-gap: 1.2rem;
+    cursor: pointer;
 }
 
 .nav_icons span i {
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    cursor: pointer;
 }
 
 .nav__icons img {
-    width: 30px;
-    height: 30px;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.mobile__menu {
+    font-size: 1.3rem;
+    color: var(--primary-color);
+    display: none;
+}
+
+.nav__active {
+    font-weight: 700 !important;
+}
+
+.cart__icon,
+.fav__icon {
+    position: relative;
+}
+
+.badge {
+    position: absolute;
+    top: 25%;
+    right: -8%;
+    right: 0%;
+    width: 15px;
+    height: 15px;
+    content: "";
+    background: var(--primary-color);
+    color: #fff;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.7rem;
+    font-weight: 600;
+    z-index: 10;
 }

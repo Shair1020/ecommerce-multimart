@@ -68,7 +68,7 @@ const Footer = () => {
                   <span className="text-white flex">
                     <i class="ri-map-pin-line"></i>
                     <p className="m-2">
-                      Plot 145(Shah Faisal Colony, Al Falah Society)
+                      Plot 145,Alfalah Society
                     </p>
                   </span>
                 </ListGroupItem>

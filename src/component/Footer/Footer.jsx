@@ -11,20 +11,21 @@ const Footer = () => {
         <Row>
           <Col lg="4">
             <div className="logo">
-              <img src={logo} alt="logo" />
               <div>
-                <h1>Multimart</h1>
+                <h1 className="text-white">Multimart</h1>
               </div>
-              <p className="footer__text mt-4">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam
-                aspernatur, neque explicabo est omnis sunt dolores voluptates
-                ducimus fuga quis.
-              </p>
             </div>
+            <p className="footer__text mt-4">
+              Building a successful furniture business demands more than just
+              creating beautiful furniture. Most buyers see furniture as a
+              long-term relationship, which means your products need to be in
+              front of the right people at the right time and they need to make
+              a positive, lasting impression.
+            </p>
           </Col>
           <Col lg="3">
             <div className="footer__quick-links">
-              <h4 className="quick__link-title">Top Categories</h4>
+              <h4 className="quick__links-title">Top Categories</h4>
               <ListGroup>
                 <ListGroupItem className="ps-0 border-0">
                   <Link to="#">Mobile Phones</Link>
@@ -43,7 +44,7 @@ const Footer = () => {
           </Col>
           <Col lg="2">
             <div className="footer__quick-links">
-              <h4 className="quick__link-title">Useful Links</h4>
+              <h4 className="quick__links-title">Useful Links</h4>
               <ListGroup>
                 <ListGroupItem className="ps-0 border-0">
                   <Link to="/shop">Shop</Link>
@@ -62,7 +63,7 @@ const Footer = () => {
           </Col>
           <Col lg="3">
             <div className="footer__quick-links">
-              <h4 className="quick__link-title">Contact</h4>
+              <h4 className="quick__links-title">Contact</h4>
               <ListGroup>
                 <ListGroupItem className="ps-0 border-0">
                   <span>
@@ -84,6 +85,12 @@ const Footer = () => {
                 </ListGroupItem>
               </ListGroup>
             </div>
+          </Col>
+          <Col lg="12">
+            <p className="footer__copyright">
+              Copyright {new Date().getFullYear()} developed by PandaTech. All
+              right reserved
+            </p>
           </Col>
         </Row>
       </Container>

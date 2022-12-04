@@ -63,23 +63,25 @@ const Footer = () => {
           <Col lg="3">
             <div className="footer__quick-links">
               <h4 className="quick__links-title">Contact</h4>
-              <ListGroup>
+              <ListGroup className="footer_contact">
                 <ListGroupItem className="ps-0 border-0">
-                  <span>
-                    <i className="ri-map-pin-line"></i>
-                    <p>Plot 145(Shah Faisal Colony, Al Falah Society)</p>
+                  <span className="text-white flex">
+                    <i class="ri-map-pin-line"></i>
+                    <p className="m-2">
+                      Plot 145(Shah Faisal Colony, Al Falah Society)
+                    </p>
                   </span>
                 </ListGroupItem>
                 <ListGroupItem className="ps-0 border-0">
-                  <span>
-                    <i className="ri-phone-line"></i>
-                    <p>+923463085302</p>
+                  <span className="text-white flex">
+                    <i class="ri-phone-line"></i>
+                    <p className="m-2">+923463085302</p>
                   </span>
                 </ListGroupItem>
                 <ListGroupItem className="ps-0 border-0">
-                  <span>
-                    <i className="ri-mail-line"></i>
-                    <p>example@gmailcom</p>
+                  <span className="text-white flex">
+                    <i class="ri-mail-line"></i>
+                    <p className="m-2">example@gmailcom</p>
                   </span>
                 </ListGroupItem>
               </ListGroup>

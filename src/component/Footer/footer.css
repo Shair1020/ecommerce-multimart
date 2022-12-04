@@ -22,3 +22,23 @@
   color: #fff;
   font-size: 1.1rem;
 }
+
+.footer__contact li span,
+.footer__contact p {
+  color: rgba(255, 255, 255, 0.735);
+}
+
+.footer__contact li span {
+  font-size: 1.2rem;
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  padding-right: 10px;
+}
+.footer__copyright {
+  color: rgba(255, 255, 255, 0.735);
+  margin-top: 50px;
+  text-align: center;
+}

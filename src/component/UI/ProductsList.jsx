@@ -1,15 +1,14 @@
-import React from 'react'
-import ProductsCard from './ProductsCard'
+import React from "react";
+import ProductsCard from "./ProductsCard";
 
-const ProductsList = () => {
+const ProductsList = ({ products }) => {
   return (
     <>
-      <ProductsCard />
-      <ProductsCard />
-      <ProductsCard />
-      <ProductsCard />
+      {products?.map((i) => (
+        <ProductsCard item={i} />
+      ))}
     </>
-  )
-}
+  );
+};
 
-export default ProductsList
+export default ProductsList;

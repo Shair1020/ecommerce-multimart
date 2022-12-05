@@ -6,6 +6,7 @@ import userIcon from "../../assets/images/user-icon.png";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useRef } from "react";
+import { useSelector } from "react-redux";
 
 const nav__links = [
   {
@@ -25,6 +26,7 @@ const nav__links = [
 const Header = () => {
   const headerRef = useRef(null);
   const menuRef = useRef(null);
+  const totalQuantity = useSelector((state) => state.cart.totalQuantity);
   const stickyHeader = () => {
     window.addEventListener("scroll", () => {
       if (
@@ -81,7 +83,7 @@ const Header = () => {
               </span>
               <span className="cart__icon">
                 <i class="ri-shopping-bag-line"></i>
-                <span className="badge">2</span>
+                <span className="badge">{totalQuantity}</span>
               </span>
               <motion.img whileTap={{ scale: 1.3 }} src={userIcon} alt="" />
               <div className="mobile__menu">

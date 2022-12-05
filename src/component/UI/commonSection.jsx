@@ -2,7 +2,7 @@ import React from "react";
 import { Container } from "reactstrap";
 import "../../styles/common-section.css";
 
-const commonSection = ({ title }) => {
+const CommonSection = ({ title }) => {
   return (
     <section className="common__section">
       <Container className="text-center">
@@ -12,4 +12,4 @@ const commonSection = ({ title }) => {
   );
 };
 
-export default commonSection;
+export default CommonSection;

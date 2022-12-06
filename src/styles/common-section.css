@@ -1,7 +1,7 @@
 .common__section {
   background: linear-gradient(rgba(0, 0, 0, 0.562), rgba(0, 0, 0, 0.562)),
-    url("../assets/images/common-section-bg.jpg") no-repeat center center;
-  background-size: contain;
+    url("../assets/images/common-section-bg.jpg") no-repeat center;
+  background-size: cover;
 }
 
 .common__section h1 {

@@ -3,7 +3,7 @@ import { Container, Row } from "reactstrap";
 import "./header.css";
 import logo from "../../assets/images/eco-logo.png";
 import userIcon from "../../assets/images/user-icon.png";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { useRef } from "react";
 import { useSelector } from "react-redux";
@@ -24,6 +24,7 @@ const nav__links = [
 ];
 
 const Header = () => {
+  const navigate = useNavigate();
   const headerRef = useRef(null);
   const menuRef = useRef(null);
   const totalQuantity = useSelector((state) => state.cart.totalQuantity);
@@ -81,7 +82,7 @@ const Header = () => {
                 <i class="ri-heart-line"></i>
                 <span className="badge">1</span>
               </span>
-              <span className="cart__icon">
+              <span className="cart__icon" onClick={() => navigate("/cart")}>
                 <i class="ri-shopping-bag-line"></i>
                 <span className="badge">{totalQuantity}</span>
               </span>

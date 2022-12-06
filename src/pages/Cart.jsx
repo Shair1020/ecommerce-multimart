@@ -6,10 +6,12 @@ import { Col, Container, Row } from "reactstrap";
 import { motion } from "framer-motion";
 import { deleteItem } from "../redux/slices/cartSlice";
 import { useSelector, useDispatch } from "react-redux";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.cartItems);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
   const deleteItems = (id) => {
     dispatch(deleteItem(id));
   };
@@ -59,7 +61,23 @@ const Cart = () => {
                 )}
               </table>
             </Col>
-            <Col lg="3"></Col>
+            <Col lg="3">
+              <div>
+                <h6 className="d-flex align-items-center justify-content-between">
+                  <strong>SubTotal</strong>
+                  <span className="fs-4 fw-bold">${totalAmount}</span>
+                </h6>
+              </div>
+              <p className="fs-6 mt-2 bold">Taxes and shipping will calculate in checkout</p>
+              <div>
+                <button className="buy__btn w-100">
+                  <Link to="/shop">Continue Shopping</Link>
+                </button>
+                <button className="buy__btn w-100 mt-3">
+                  <Link to="/checkout">Checkout</Link>
+                </button>
+              </div>
+            </Col>
           </Row>
         </Container>
       </section>

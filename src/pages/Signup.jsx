@@ -64,48 +64,54 @@ const Signup = () => {
       <section>
         <Container>
           <Row>
-            <Col lg="6" className="m-auto text-center">
-              <h1 className="fw-bold fs-4">Register</h1>
-              <Form className="auth__form" onSubmit={signup}>
-                <FormGroup className="form__group">
-                  <input
-                    type="text"
-                    placeholder="Username"
-                    value={username}
-                    onChange={(e) => setusername(e.target.value)}
-                  />
-                </FormGroup>
-                <FormGroup className="form__group">
-                  <input
-                    type="email"
-                    placeholder="Enter your email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                  />
-                </FormGroup>
-                <FormGroup className="form__group">
-                  <input
-                    type="password"
-                    placeholder="Enter your password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                  />
-                </FormGroup>
-                <FormGroup className="form__group">
-                  <input
-                    type="file"
-                    onChange={(e) => setFile(e.target.files[0])}
-                  />
-                </FormGroup>
-                <button className="buy__btn login__btn w-100">
-                  Create an Account
-                </button>
-                <p>
-                  Already have an account?
-                  <Link to="/login"> Login</Link>
-                </p>
-              </Form>
-            </Col>
+            {loading ? (
+              <Col lg="12" className="text-center">
+                <h6 className="fw-bold">Loading...</h6>
+              </Col>
+            ) : (
+              <Col lg="6" className="m-auto text-center">
+                <h1 className="fw-bold fs-4">Register</h1>
+                <Form className="auth__form" onSubmit={signup}>
+                  <FormGroup className="form__group">
+                    <input
+                      type="text"
+                      placeholder="Username"
+                      value={username}
+                      onChange={(e) => setusername(e.target.value)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="form__group">
+                    <input
+                      type="email"
+                      placeholder="Enter your email"
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="form__group">
+                    <input
+                      type="password"
+                      placeholder="Enter your password"
+                      value={password}
+                      onChange={(e) => setPassword(e.target.value)}
+                    />
+                  </FormGroup>
+                  <FormGroup className="form__group">
+                    <input
+                      type="file"
+                      onChange={(e) => setFile(e.target.files[0])}
+                    />
+                  </FormGroup>
+                  <button className="buy__btn login__btn w-100">
+                    Create an Account
+                  </button>
+                  <p>
+                    Already have an account?
+                    <Link to="/login"> Login</Link>
+                  </p>
+                </Form>
+              </Col>
+            )}
           </Row>
         </Container>
       </section>
